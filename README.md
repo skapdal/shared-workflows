@@ -21,7 +21,7 @@ jobs:
   build:
     uses: skapdal/shared-workflows/.github/workflows/docker-build-push.yml@main
     with:
-      image-name: nombre-del-repo
+      image_name: nombre-del-repo
     secrets: inherit
 ```
 

@@ -3,8 +3,8 @@ name: Docker Build & Push
 on:
   workflow_call:
     inputs:
-      image-name:
-        description: "Nombre de la imagen en GHCR (ghcr.io/skapdal/<image-name>)"
+      image_name:
+        description: "Nombre de la imagen en GHCR (ghcr.io/skapdal/<image_name>)"
         required: true
         type: string
       context:
@@ -42,7 +42,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/${{ github.repository_owner }}/${{ inputs.image-name }}
+          images: ghcr.io/${{ github.repository_owner }}/${{ inputs.image_name }}
           tags: |
             type=sha,prefix=,format=short
             type=raw,value=latest,enable={{is_default_branch}}
