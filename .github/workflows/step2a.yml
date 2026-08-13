@@ -1,0 +1,16 @@
+name: Step2a
+
+on:
+  workflow_call:
+    inputs:
+      image_name:
+        description: "test"
+        required: true
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
